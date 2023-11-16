@@ -100,19 +100,14 @@
   
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Adicione um listener ao formulário para capturar o evento de envio
             document.querySelector("form").addEventListener("submit", function (event) {
-                // Obtenha os valores inseridos pelo usuário
                 var email = document.getElementById("email").value;
                 var senha = document.getElementById("senha").value;
 
-                // Verifique se as credenciais são válidas (admin e senha 123)
+                // Verifique se as credenciais são válidas (admin e senha)
                 if (email.toLowerCase() === "admin@email.com" && senha === "123") {
-                    // Redirecione para a página listar
                     window.location.href = "listar";
                 } else {
-                    // Continue com o processo de login normal
-                    // (você pode querer enviar as credenciais para o servidor para verificar lá)
                 }
 
                 // Evite que o formulário seja enviado normalmente
