@@ -40,7 +40,7 @@ public class MentorController {
 			e.printStackTrace();
 		}
 
-		ModelAndView modelAndView = new ModelAndView("redirect:/listarMentor");
+		ModelAndView modelAndView = new ModelAndView("redirect:/sucesso");
 
 		mentorRepository.save(mentor);
 

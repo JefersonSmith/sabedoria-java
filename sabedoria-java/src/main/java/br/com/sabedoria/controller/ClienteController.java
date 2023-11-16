@@ -40,7 +40,7 @@ public class ClienteController {
 			e.printStackTrace();
 		}
 
-		ModelAndView modelAndView = new ModelAndView("redirect:/listar");
+		ModelAndView modelAndView = new ModelAndView("redirect:/sucesso");
 
 		clienteRepository.save(cliente);
 
