@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
- 
+
 	<title>Listagem de Clientes</title>
 </head>
- 
+
 <body>
 	<nav class="navbar navbar-light bg-light">
 		<div class="container justify-content-start">
-      		<a class="navbar-brand" href="/listarMentor">Mentores</a>
-      		<a class="navbar-brand" href="/listar">Mentorados</a>
-      		<a class="navbar-brand" href="/listarMonitorias">Monitorias</a>
+			<a class="navbar-brand" href="/listarMentor">Mentores</a>
+			<a class="navbar-brand" href="/listar">Mentorados</a>
+			<a class="navbar-brand" href="/listarMonitorias">Monitorias</a>
 
-      		<a class="navbar-brand" href="/">Sair</a>
+			<a class="navbar-brand" href="/">Sair</a>
 
-      		
-   		</div>
+
+		</div>
 	</nav>
- 
+
 	<main class="container">
 		<div class="row">
 			<div class="col-sm-12">
 				<h1>Listagem de Mentorados</h1>
 			</div>
 		</div>
- 
+
 		<div class="row">
 			<div class="col-sm-12">
 				<table class="table">
@@ -42,7 +42,7 @@
 							<th scope="col">Foto</th>
 							<th scope="col">Idade</th>
 							<th scope="col">Profissão</th>
-							
+
 							<th scope="col">CPF</th>
 							<th scope="col">Endereço</th>
 							<th scope="col">Email</th>
@@ -53,13 +53,12 @@
 					<tbody>
 						<tr th:each="cliente : ${clientes}">
 							<th scope="row" th:text="${cliente.id}"></th>
-							<td>
-								<a th:text="${cliente.nome}" th:href="@{/{id} (id=${cliente.id})}"></a>
-							</td>
+							<td th:text="${cliente.nome}"></td>
+
 							<td>
 								<img alt="Image" class="img_prod" height="70px" width="50px"
 									th:src="|/imagem/${cliente.id}|" />
- 
+
 							</td>
 							<td th:text="${cliente.idade}"></td>
 							<td th:text="${cliente.profissao}"></td>
@@ -81,20 +80,20 @@
 				</table>
 			</div>
 		</div>
- 
+
 		<div class="row">
 			<div class="col-sm-12">
 				<a th:href="cadastrarMentorado" class="btn btn-primary">Cadastrar novo Cliente</a>
 			</div>
 		</div>
 	</main>
-	
-	
-	
- 
+
+
+
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
 		crossorigin="anonymous"></script>
 </body>
- 
+
 </html>
