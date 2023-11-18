@@ -80,14 +80,15 @@ public class MentorController {
 		return modelAndView;
 	}	
 	
-	@GetMapping("/{id}/excluirMentor")
+	@GetMapping("/mentor/{id}/excluir")
 	public ModelAndView excluirMentor(@PathVariable Long id) {
-		ModelAndView modelAndView = new ModelAndView("redirect:/listarMentor");
+	    ModelAndView modelAndView = new ModelAndView("redirect:/listarMentor");
 
-		mentorRepository.deleteById(id);
+	    mentorRepository.deleteById(id);
 
-		return modelAndView;
+	    return modelAndView;
 	}
+
 
 
 }

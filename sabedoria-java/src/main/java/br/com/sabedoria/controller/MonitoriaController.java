@@ -76,4 +76,16 @@ public class MonitoriaController {
 
         return modelAndView;
     }
+    
+    @GetMapping("/excluirMonitoria")
+    public ModelAndView excluirMonitoria(@RequestParam("id") Long id) {
+        ModelAndView modelAndView = new ModelAndView("redirect:/listarMonitorias");
+
+        if (monitoriaRepository.existsById(id)) {
+            monitoriaRepository.deleteById(id);
+        }
+
+        return modelAndView;
+    }
+
 }
