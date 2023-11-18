@@ -53,12 +53,11 @@ public class MonitoriaController {
         Mentor mentor = mentorRepository.getOne(mentorId);
         Cliente cliente = clienteRepository.getOne(clienteId);
 
-        // Converta a String dataHora para um objeto LocalDateTime
         LocalDateTime horario = LocalDateTime.parse(dataHora, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm"));
 
         monitoria.setMentor(mentor);
         monitoria.setCliente(cliente);
-        monitoria.setHorario(horario); // Defina a data e hora aqui
+        monitoria.setHorario(horario); 
 
         ModelAndView modelAndView = new ModelAndView("redirect:/listarMonitorias");
 
@@ -87,5 +86,7 @@ public class MonitoriaController {
 
         return modelAndView;
     }
+    
+    
 
 }

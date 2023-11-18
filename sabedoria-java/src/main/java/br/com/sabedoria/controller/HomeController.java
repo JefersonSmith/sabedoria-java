@@ -21,26 +21,6 @@ public class HomeController {
         return "index";
     }
 
-//    @GetMapping("/sobreNos")
-//    public String sobreNos() {
-//        return "sobreNos";
-//    }
-    
-//    @GetMapping("/mentores")
-//    public String mentores() {
-//        return "mentores";
-//    }
-    
-//    @GetMapping("/cadastro")
-//    public String cadastro() {
-//        return "cadastro";
-//    }
-//    
-//    @GetMapping("/login")
-//    public String login() {
-//        return "login";
-//    }
-//    
     @GetMapping("/sucesso")
     public String sucesso() {
         return "sucesso";

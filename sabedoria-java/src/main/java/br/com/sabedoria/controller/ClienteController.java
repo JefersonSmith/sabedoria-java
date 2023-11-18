@@ -54,16 +54,7 @@ public class ClienteController {
 		return cliente.getImagem();
 	}	
 	
-//	@GetMapping("/{id}")
-//	public ModelAndView detalhar(@PathVariable Long id) {
-//		ModelAndView modelAndView = new ModelAndView("detalhar.html");
-//
-//		Cliente cliente = clienteRepository.getOne(id);
-//		modelAndView.addObject("cliente", cliente);
-//
-//		return modelAndView;
-//	}
-	
+
 	@GetMapping("/{id}/editar")
 	public ModelAndView editar(@PathVariable Long id) {
 		ModelAndView modelAndView = new ModelAndView("edicao");
