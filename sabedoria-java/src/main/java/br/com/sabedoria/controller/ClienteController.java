@@ -1,12 +1,14 @@
 package br.com.sabedoria.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -88,6 +90,20 @@ public class ClienteController {
 
 		return modelAndView;
 	}
+	
+    @RequestMapping("/listar")
+    @GetMapping
+    public ModelAndView listar() {
+        ModelAndView modelAndView = new ModelAndView("listar.html");
+
+        List<Cliente> clientes = clienteRepository.findAll();
+        modelAndView.addObject("clientes", clientes);
+
+        return modelAndView;
+    }
+    
+//	@Autowired
+//	private ClienteRepository clienteRepository;
 
 
 }

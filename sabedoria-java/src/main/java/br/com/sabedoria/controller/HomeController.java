@@ -25,35 +25,6 @@ public class HomeController {
     public String sucesso() {
         return "sucesso";
     }
-    
-    @RequestMapping("/listar")
-    @GetMapping
-    public ModelAndView listar() {
-        ModelAndView modelAndView = new ModelAndView("listar.html");
-
-        List<Cliente> clientes = clienteRepository.findAll();
-        modelAndView.addObject("clientes", clientes);
-
-        return modelAndView;
-    }
-    
-	@Autowired
-	private ClienteRepository clienteRepository;
-	
-	@RequestMapping("/listarMentor")
-	@GetMapping
-	public ModelAndView listarMentor() {
-	    ModelAndView modelAndView = new ModelAndView("listarMentor.html");
-
-	    List<Mentor> mentors = mentorRepository.findAll();
-	    modelAndView.addObject("mentors", mentors);
-
-	    return modelAndView;
-	}
-
-@Autowired
-private MentorRepository mentorRepository;
-    
-	
+    	
 
 }

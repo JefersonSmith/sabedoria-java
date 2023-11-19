@@ -1,6 +1,7 @@
 package br.com.sabedoria.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -88,6 +89,21 @@ public class MentorController {
 
 	    return modelAndView;
 	}
+	
+	@RequestMapping("/listarMentor")
+	@GetMapping
+	public ModelAndView listarMentor() {
+	    ModelAndView modelAndView = new ModelAndView("listarMentor.html");
+
+	    List<Mentor> mentors = mentorRepository.findAll();
+	    modelAndView.addObject("mentors", mentors);
+
+	    return modelAndView;
+	}
+
+//@Autowired
+//private MentorRepository mentorRepository;
+    
 
 
 
