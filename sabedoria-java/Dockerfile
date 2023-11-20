@@ -13,4 +13,5 @@ EXPOSE 8080
 
 COPY --from=build /target/sabedoria-java-0.0.1-SNAPSHOT.jar sabedoria.jar
 
+
 ENTRYPOINT [ "java", "-jar", "sabedoria.jar" ]
