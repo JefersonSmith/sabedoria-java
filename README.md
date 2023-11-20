@@ -3,6 +3,13 @@
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 # 📁 Acesso ao projeto
+Nosso projeto pode ser acessado diretamente pelo link fornecido abaixo:
+
+https://sabedoria.onrender.com/
+
+E o nosso sistema administrativo com o CRUD pode ser acessado pelo link:
+
+https://sabedoria.onrender.com/listar
 
 
 # Nosso programa
